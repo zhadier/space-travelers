@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import rocketsReducer from './rockets/rockets';
+import rocketsReducer, { getRocketsFromAPI } from './rockets/rockets';
 
 const reducer = combineReducers({
   rocketsReducer,
@@ -9,6 +9,8 @@ const reducer = combineReducers({
 });
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
-// store.dispatch(getBooksFromAPI());
-
+store.dispatch(getRocketsFromAPI());
+store.subscribe((state) => {
+  console.log(state);
+});
 export default store;
