@@ -1,0 +1,51 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  margin: 0 3rem 5rem 3rem;
+  border-bottom: 1px solid grey;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-decoration: none;
+    color: #000;
+
+    img {
+      width: 6rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  nav {
+    margin-left: auto;
+
+    ul {
+      list-style: none;
+      display: flex;
+      font-size: 2rem;
+
+      li {
+        padding: 0 2rem;
+
+        &:nth-child(3) {
+          border-left: 1px solid #000;
+        }
+
+        a {
+          text-decoration: none;
+          color: #487bff;
+        }
+
+        .active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

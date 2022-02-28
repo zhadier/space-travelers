@@ -1,20 +1,42 @@
-import { Link } from 'react-router-dom';
-import { ImUser } from 'react-icons/im';
+import { NavLink } from 'react-router-dom';
+import planet from '../img/planet.png';
 import './Header.scss';
 
 const Header = () => (
   <header>
-    <h1 className="logo">Bookstore CMS</h1>
+    <NavLink
+      to="/"
+    >
+      <img className="logo-img" alt="logo" src={planet} />
+      <h1 className="title">Space Travelers&quot; Hub</h1>
+    </NavLink>
     <nav className="header__nav">
       <ul>
         <li>
-          <Link to="/">Books</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            to="/"
+          >
+            Rockets
+          </NavLink>
         </li>
         <li>
-          <Link to="categories">Categories</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            to="/missions"
+          >
+            Missions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            to="/profile"
+          >
+            Profile
+          </NavLink>
         </li>
       </ul>
-      <ImUser className="user-icon" />
     </nav>
   </header>
 );
