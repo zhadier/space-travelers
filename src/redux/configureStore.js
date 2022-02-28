@@ -3,11 +3,12 @@
 // import thunk from 'redux-thunk';
 
 // const reducer = combineReducers({
-//   booksReducer,
+//   rocketsReducer,
+//   missionsReducer,
 //   // additional reducers could be added here
 // });
 
 // const store = createStore(reducer, applyMiddleware(thunk, logger));
-// store.dispatch(getBooksFromAPI());
+// // store.dispatch(getBooksFromAPI());
 
 // export default store;
