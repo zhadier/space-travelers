@@ -1,0 +1,82 @@
+.rockets-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 6rem 6rem;
+
+  .rocket-container {
+    display: flex;
+    gap: 2rem;
+
+    img {
+      width: 350px;
+    }
+
+    .rocket-description {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.4;
+
+        span {
+          background-color: #18a2b8;
+          color: white;
+          border-radius: 5px;
+          padding: 2px 5px;
+          margin-right: 10px;
+        }
+      }
+
+      .add-reservation {
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        background-color: #007bff;
+        cursor: pointer;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        transition: background-color linear 0.2s;
+
+        &:hover {
+          background-color: blueviolet;
+        }
+
+        &:active {
+          background-color: blueviolet;
+          box-shadow: inset 0 0 10px black;
+        }
+      }
+
+      .remove-reservation {
+        width: 16rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid gray;
+        border-radius: 5px;
+        color: gray;
+        transition: color linear 0.2s, border-color;
+
+        &:hover {
+          color: blueviolet;
+          border-color: blueviolet;
+        }
+
+        &:active {
+          color: blueviolet;
+          box-shadow: inset 0 0 5px blueviolet;
+        }
+      }
+    }
+  }
+}

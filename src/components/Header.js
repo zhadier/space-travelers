@@ -5,6 +5,7 @@ import './Header.scss';
 const Header = () => (
   <header>
     <NavLink
+      className="logo"
       to="/"
     >
       <img className="logo-img" alt="logo" src={planet} />
