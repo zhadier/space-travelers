@@ -10,7 +10,7 @@ table {
     border: 1px solid #ddd;
   }
 
-  tr:nth-child(even){
+  tr:nth-child(even) {
     background-color: #eee;
   }
 
@@ -32,7 +32,7 @@ table {
     width: 10%;
     text-align: center;
   }
-    
+
   span {
     font-size: 1rem;
     font-weight: bold;
