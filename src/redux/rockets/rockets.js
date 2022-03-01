@@ -34,6 +34,7 @@ export const getRocketsFromAPI = () => async (dispatch) => {
         name: rocket.rocket_name,
         image: rocket.flickr_images[0],
         description: rocket.description,
+        wikipedia: rocket.wikipedia,
         reserved: false,
       }));
       if (arrangedList) {
