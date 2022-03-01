@@ -10,7 +10,4 @@ const reducer = combineReducers({
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 store.dispatch(getRocketsFromAPI());
-store.subscribe((state) => {
-  console.log(state);
-});
 export default store;
