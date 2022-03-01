@@ -1,3 +1,70 @@
-Table {
-  background-color: #eee;
+table {
+  font-size: 1.6rem;
+  width: 90%;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+
+  th {
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  tr:nth-child(even){
+    background-color: #eee;
+  }
+
+  td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  .td-name {
+    width: 10%;
+    font-weight: bold;
+  }
+
+  .td-description {
+    width: 70%;
+  }
+
+  .td-badge {
+    width: 10%;
+    text-align: center;
+  }
+    
+  span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: grey;
+  }
+
+  .td-button {
+    width: 10%;
+    text-align: center;
+
+    button {
+      font-size: 1.5rem;
+      background-color: transparent;
+      cursor: pointer;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: gray;
+      transition: color linear 0.2s, border-color;
+      padding: 0.6rem;
+
+      &:hover {
+        color: blueviolet;
+        border-color: blueviolet;
+      }
+
+      &:active {
+        color: blueviolet;
+        box-shadow: inset 0 0 5px blueviolet;
+      }
+    }
+  }
 }

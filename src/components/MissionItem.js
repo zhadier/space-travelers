@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+import './Mission.scss';
 
 const MissionItem = (props) => {
   const {
@@ -6,13 +7,11 @@ const MissionItem = (props) => {
   } = props;
   return (
     <tr id={id}>
-      <td>{name}</td>
-      <td>{description}</td>
-      <td>NOT A MEMBER</td>
-      <td>
-        <button type="button">
-          Join Mission
-        </button>
+      <td className="td-name">{name}</td>
+      <td className="td-description">{description}</td>
+      <td className="td-badge"><span>NOT A MEMBER</span></td>
+      <td className="td-button">
+        <button type="button">Join Mission</button>
       </td>
     </tr>
   );
