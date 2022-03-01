@@ -13,6 +13,7 @@ const Rockets = () => {
           id={item.id}
           name={item.name}
           image={item.image}
+          reserved={item.reserved}
         />
       ))}
     </ul>

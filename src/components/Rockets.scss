@@ -25,9 +25,17 @@
       p {
         font-size: 1.5rem;
         line-height: 1.4;
+
+        span {
+          background-color: #18a2b8;
+          color: white;
+          border-radius: 5px;
+          padding: 2px 5px;
+          margin-right: 10px;
+        }
       }
 
-      button {
+      .add-reservation {
         width: 15rem;
         height: 4rem;
         font-size: 1.5rem;
@@ -45,6 +53,28 @@
         &:active {
           background-color: blueviolet;
           box-shadow: inset 0 0 10px black;
+        }
+      }
+
+      .remove-reservation {
+        width: 16rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid gray;
+        border-radius: 5px;
+        color: gray;
+        transition: color linear 0.2s, border-color;
+
+        &:hover {
+          color: blueviolet;
+          border-color: blueviolet;
+        }
+
+        &:active {
+          color: blueviolet;
+          box-shadow: inset 0 0 5px blueviolet;
         }
       }
     }
