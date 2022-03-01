@@ -6,12 +6,13 @@ header {
   margin: 0 3rem 5rem 3rem;
   border-bottom: 1px solid grey;
 
-  a {
+  .logo {
     display: flex;
     align-items: center;
     gap: 2rem;
     text-decoration: none;
     color: #000;
+    text-shadow: 0 0 2px black;
 
     img {
       width: 6rem;

@@ -13,7 +13,5 @@ const reducer = combineReducers({
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 store.dispatch(getRocketsFromAPI());
 store.dispatch(fetchMissionsFromAPI());
-store.subscribe((state) => {
-  console.log(state);
-});
+
 export default store;
