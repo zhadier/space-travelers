@@ -11,10 +11,10 @@ const ReservedRocket = (props) => {
   };
 
   return (
-    <li className="reserved-rocket__container" id={id}>
+    <li className="reserved__container" id={id}>
       <h3>{name}</h3>
-      <div className="reserved-rocket__buttons">
-        <a href={wikipedia}>Read more</a>
+      <div className="reserved__buttons">
+        <a href={wikipedia} target="_blank" rel="noreferrer">Read more</a>
         <button type="button" className="remove-reservation" onClick={handleCancelReservation}>
           Cancel Reservation
         </button>
