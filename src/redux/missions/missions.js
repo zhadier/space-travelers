@@ -8,14 +8,14 @@ const baseURL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
 
 // action creators
-export const joinMission = (payload) => ({
+export const joinMission = (id) => ({
   type: JOIN_MISSION,
-  payload,
+  id,
 });
 
-export const leaveMission = (payload) => ({
+export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
-  payload,
+  id,
 });
 
 export const fetchMissions = (payload) => ({
@@ -28,11 +28,11 @@ export const fetchMissionsFromAPI = () => async (dispatch) => {
   await fetch(`${baseURL}`)
     .then((response) => response.json())
     .then((MissionsList) => {
-      console.log(MissionsList);
       const arrangedList = MissionsList.map((mission) => ({
         id: mission.mission_id,
         name: mission.mission_name,
         description: mission.description,
+        wikipedia: mission.wikipedia,
         reserved: false,
       }));
       if (arrangedList) {
@@ -44,10 +44,20 @@ export const fetchMissionsFromAPI = () => async (dispatch) => {
 // reducer
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case JOIN_MISSION:
-      return [...state, action.payload];
-    case LEAVE_MISSION:
-      return state.filter((mission) => mission.item_id !== action.payload);
+    case JOIN_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, reserved: true };
+      });
+      return [...newState];
+    }
+    case LEAVE_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, reserved: false };
+      });
+      return [...newState];
+    }
     case FETCH_MISSIONS:
       return [...action.payload];
     default:
