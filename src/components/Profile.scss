@@ -6,7 +6,7 @@
   background-color: white;
   box-shadow: 0 0 5px orange;
   top: 40%;
-  left: 33%;
+  right: 10%;
   border: 1px solid;
   display: flex;
   justify-content: center;
@@ -15,40 +15,73 @@
   animation: slideIn infinite 8s linear;
 
   @keyframes slideIn {
-    from {
-      left: -30%;
+    0% {
+      top: 50%;
     }
 
-    to {
-      left: 130%;
+    50% {
+      top: 40%;
+    }
+
+    100% {
+      top: 50%;
     }
   }
 }
 
-.reserved-rockets__section {
+.empty-missions {
+  position: absolute;
+  left: 10%;
+  animation: missions-slideIn infinite 8s linear;
+
+  @keyframes missions-slideIn {
+    0% {
+      top: 50%;
+    }
+
+    50% {
+      top: 40%;
+    }
+
+    100% {
+      top: 50%;
+    }
+  }
+}
+
+.profile-container {
+  display: flex;
+  position: relative;
+  min-height: 50vh;
+}
+
+.reserved__section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-left: auto;
-  padding: 0 6rem 6rem 2rem;
+  padding: 0 2rem 6rem 6rem;
   width: 50%;
 
   h2 {
     font-size: 2.8rem;
+    margin-bottom: 2rem;
   }
 
   ul {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 15px;
 
-    .reserved-rocket__container {
+    .reserved__container {
       display: flex;
       padding: 2rem;
-      border: 1px solid gray;
-      border-top: none;
+      border-bottom: 1px solid gray;
+      background-image: linear-gradient(to right, rgba(128, 128, 128, 0.541), white);
 
-      &:first-child {
-        border-top: 1px solid gray;
+      &:last-child {
+        border-bottom: none;
       }
 
       h3 {
@@ -56,7 +89,7 @@
         align-self: center;
       }
 
-      .reserved-rocket__buttons {
+      .reserved__buttons {
         display: flex;
         align-items: center;
         margin-left: auto;
@@ -113,4 +146,29 @@
       }
     }
   }
+}
+
+.red {
+  border: 1px solid red !important;
+  color: red !important;
+
+  &:hover {
+    color: blueviolet !important;
+    border-color: blueviolet !important;
+  }
+
+  &:active {
+    color: blueviolet !important;
+    box-shadow: inset 0 0 5px blueviolet !important;
+  }
+}
+
+// .right {
+//   margin-left: auto;
+// }
+
+.left {
+  margin-left: auto;
+  float: right;
+  padding: 0 6rem 6rem 2rem;
 }

@@ -3,6 +3,7 @@ table {
   width: 90%;
   border-collapse: collapse;
   border: 2px solid #ddd;
+  margin-bottom: 4rem;
 
   th {
     font-weight: bold;
@@ -37,9 +38,13 @@ table {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
     background-color: grey;
+  }
+
+  .active-member {
+    background-color: #18a2b8;
   }
 
   .td-button {
