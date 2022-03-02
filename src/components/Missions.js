@@ -1,14 +1,17 @@
-// import { useSelector, useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import MissionItem from './MissionItem';
-// import { fetchMissionsFromAPI } from '../redux/missions/missions';
+import { fetchMissionsFromAPI } from '../redux/missions/missions';
 import './MissionItem.scss';
 
 const Missions = () => {
-  // const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missionsReducer);
 
-  // dispatch(fetchMissionsFromAPI());
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (missionList.length === 0) dispatch(fetchMissionsFromAPI());
+  });
 
   return (
     <section className="missions-container">
@@ -29,6 +32,7 @@ const Missions = () => {
                 id={mission.id}
                 name={mission.name}
                 description={mission.description}
+                reserved={mission.reserved}
               />
             ))
           }
