@@ -5,6 +5,12 @@ header {
   padding: 3rem;
   margin: 0 3rem 5rem 3rem;
   border-bottom: 1px solid grey;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
+  background-color: #fff;
+  z-index: 2;
 
   .logo {
     display: flex;
