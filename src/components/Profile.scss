@@ -61,6 +61,7 @@
   flex-direction: column;
   padding: 0 2rem 6rem 6rem;
   width: 50%;
+  min-width: 300px;
 
   h2 {
     font-size: 2.8rem;
@@ -192,7 +193,7 @@
     }
 
     50% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
 
     100% {
@@ -206,7 +207,7 @@
 
   @keyframes slideIn2 {
     0% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
 
     50% {
@@ -214,7 +215,7 @@
     }
 
     100% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
   }
 
@@ -231,7 +232,7 @@
   }
 
   .reserved__section {
-    padding: 0px;
+    padding: 0;
     margin-bottom: 100px;
 
     h2 {
@@ -247,6 +248,7 @@
 
         .reserved__buttons {
           gap: 8px;
+
           a {
             font-size: 1.1rem;
             width: 65px;

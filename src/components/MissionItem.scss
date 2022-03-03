@@ -127,13 +127,12 @@ table {
       text-align: center;
     }
 
-    .td-badge, .td-button {
+    .td-badge,
+    .td-button {
       width: 100%;
       display: flex;
       justify-content: center;
       border: none;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
       padding: 1rem;
       margin: 1rem;
     }
@@ -148,6 +147,8 @@ table {
     }
 
     .td-button {
+      margin-bottom: 3rem;
+
       button {
         font-size: 1.6rem;
         width: 20rem;
