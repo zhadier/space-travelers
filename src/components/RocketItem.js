@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { addRocketReservation, removeRocketReservation } from '../redux/rockets/rockets';
+import { loadState, saveState } from '../logic/localStorage';
 
 const RocketItem = (props) => {
   const dispatch = useDispatch();
@@ -8,12 +9,18 @@ const RocketItem = (props) => {
     id, name, image, desc, reserved,
   } = props;
 
+  let reservedList = loadState();
+
   const handleReserveClick = () => {
     dispatch(addRocketReservation(id));
+    reservedList = [...reservedList, id];
+    saveState(reservedList);
   };
 
   const handleRemoveReserveClick = () => {
     dispatch(removeRocketReservation(id));
+    reservedList = reservedList.filter((item) => item !== id);
+    saveState(reservedList);
   };
 
   return (
@@ -23,7 +30,7 @@ const RocketItem = (props) => {
         <h2>{name}</h2>
         <p>
           {reserved && <span>Reserved</span>}
-          { `${desc}` }
+          {`${desc}`}
         </p>
         {reserved ? (
           <button type="button" className="remove-reservation" onClick={handleRemoveReserveClick}>

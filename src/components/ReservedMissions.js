@@ -1,13 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { leaveMission } from '../redux/missions/missions';
+import { loadState, saveState } from '../logic/localStorage';
 
 const ReservedMission = (props) => {
   const dispatch = useDispatch();
   const { id, name, wikipedia } = props;
+  let reservedList = loadState();
 
   const handleLeaveMission = () => {
     dispatch(leaveMission(id));
+    reservedList = reservedList.filter((item) => item !== id);
+    saveState(reservedList);
   };
 
   return (
