@@ -1,4 +1,6 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchMissionsFromAPI } from '../redux/missions/missions';
 import ReservedRocket from './ReservedRocket';
 import ReservedMission from './ReservedMissions';
 import './Profile.scss';
@@ -8,6 +10,12 @@ const Profile = () => {
   const reservedRockets = rocketList.filter((rocket) => rocket.reserved === true);
   const missionList = useSelector((state) => state.missionsReducer);
   const reservedMissions = missionList.filter((mission) => mission.reserved === true);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (missionList.length === 0) dispatch(fetchMissionsFromAPI());
+  });
+
   return (
     <div className="profile-container">
       {reservedMissions.length ? (

@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../redux/missions/missions';
+import { loadState, saveState } from '../logic/localStorage';
 import './Mission.scss';
 
 const MissionItem = (props) => {
@@ -9,12 +10,18 @@ const MissionItem = (props) => {
     id, name, description, reserved,
   } = props;
 
+  let reservedList = loadState();
+
   const handleJoinMission = () => {
     dispatch(joinMission(id));
+    reservedList = [...reservedList, id];
+    saveState(reservedList);
   };
 
   const handleLeaveMission = () => {
     dispatch(leaveMission(id));
+    reservedList = reservedList.filter((item) => item !== id);
+    saveState(reservedList);
   };
 
   return (

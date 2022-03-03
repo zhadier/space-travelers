@@ -1,3 +1,4 @@
+import { loadState } from '../../logic/localStorage';
 // constants
 const JOIN_MISSION = 'space-travelers/rockets/JOIN_MISSION';
 const LEAVE_MISSION = 'space-travelers/rockets/LEAVE_MISSION';
@@ -28,13 +29,17 @@ export const fetchMissionsFromAPI = () => async (dispatch) => {
   await fetch(`${baseURL}`)
     .then((response) => response.json())
     .then((MissionsList) => {
-      const arrangedList = MissionsList.map((mission) => ({
-        id: mission.mission_id,
-        name: mission.mission_name,
-        description: mission.description,
-        wikipedia: mission.wikipedia,
-        reserved: false,
-      }));
+      const reservedList = loadState();
+      const arrangedList = MissionsList.map((mission) => {
+        const reserved = reservedList.includes(mission.mission_id);
+        return {
+          id: mission.mission_id,
+          name: mission.mission_name,
+          description: mission.description,
+          wikipedia: mission.wikipedia,
+          reserved,
+        };
+      });
       if (arrangedList) {
         dispatch(fetchMissions(arrangedList));
       }
