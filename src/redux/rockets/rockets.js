@@ -1,3 +1,4 @@
+import { loadState } from '../../logic/localStorage';
 // constants
 const ADD_RESERVATION = 'space-travelers/rockets/ADD_ROCKET_RESERVATION';
 const REMOVE_RESERVATION = 'space-travelers/rockets/REMOVE__ROCKET_RESERVATION';
@@ -29,14 +30,18 @@ export const getRocketsFromAPI = () => async (dispatch) => {
   await fetch(`${baseURL}`)
     .then((response) => response.json())
     .then((rocketsList) => {
-      const arrangedList = rocketsList.map((rocket) => ({
-        id: rocket.rocket_id,
-        name: rocket.rocket_name,
-        image: rocket.flickr_images[0],
-        description: rocket.description,
-        wikipedia: rocket.wikipedia,
-        reserved: false,
-      }));
+      const reservedList = loadState();
+      const arrangedList = rocketsList.map((rocket) => {
+        const reserved = reservedList.includes(rocket.rocket_id);
+        return {
+          id: rocket.rocket_id,
+          name: rocket.rocket_name,
+          image: rocket.flickr_images[0],
+          description: rocket.description,
+          wikipedia: rocket.wikipedia,
+          reserved,
+        };
+      });
       if (arrangedList) {
         dispatch(getRockets(arrangedList));
       }
