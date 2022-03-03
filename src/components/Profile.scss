@@ -3,7 +3,7 @@
   padding: 30px;
   width: 40rem;
   border-radius: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 5px orange;
   top: 40%;
   right: 10%;
@@ -53,6 +53,7 @@
   display: flex;
   position: relative;
   min-height: 50vh;
+  animation: slideright 1 0.5s ease-out;
 }
 
 .reserved__section {
@@ -69,16 +70,16 @@
   ul {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.205);
     overflow: hidden;
     border: 1px solid gray;
     border-radius: 15px;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.1);
 
     .reserved__container {
       display: flex;
       padding: 2rem;
       border-bottom: 1px solid gray;
-      background-image: linear-gradient(to right, rgba(128, 128, 128, 0.541), white);
 
       &:last-child {
         border-bottom: none;
@@ -99,21 +100,24 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          height: 3rem;
           width: 10rem;
           text-decoration: none;
           text-align: center;
-          height: 3rem;
           font-size: 1.5rem;
-          background-color: transparent;
+          background-color: rgba(255, 255, 255, 0.4);
           cursor: pointer;
           border: 1px solid gray;
           border-radius: 5px;
-          color: gray;
+          border-color: blueviolet;
+          color: blueviolet;
           transition: color linear 0.2s, border-color;
 
           &:hover {
-            color: blueviolet;
-            border-color: blueviolet;
+            color: rgb(63, 3, 202);
+            border-color: rgb(63, 3, 202);
+            border: 2px solid;
+            font-weight: bold;
           }
 
           &:active {
@@ -126,22 +130,26 @@
           width: 15rem;
           height: 3rem;
           font-size: 1.5rem;
-          background-color: transparent;
+          background-color: rgba(255, 255, 255, 0.3);
           cursor: pointer;
           border: 1px solid gray;
           border-radius: 5px;
-          color: gray;
+          border-color: blueviolet;
           transition: color linear 0.2s, border-color;
+          color: blueviolet;
 
           &:hover {
-            color: blueviolet;
-            border-color: blueviolet;
+            color: rgb(63, 3, 202);
+            border-color: rgb(63, 3, 202);
+            border: 2px solid;
+            font-weight: bold;
           }
 
           &:active {
             color: blueviolet;
             box-shadow: inset 0 0 5px blueviolet;
           }
+
         }
       }
     }
@@ -151,7 +159,7 @@
 .red {
   border: 1px solid red !important;
   color: red !important;
-
+  
   &:hover {
     color: blueviolet !important;
     border-color: blueviolet !important;
@@ -161,14 +169,12 @@
     color: blueviolet !important;
     box-shadow: inset 0 0 5px blueviolet !important;
   }
-}
 
-// .right {
-//   margin-left: auto;
-// }
+}
 
 .left {
   margin-left: auto;
   float: right;
   padding: 0 6rem 6rem 2rem;
+
 }

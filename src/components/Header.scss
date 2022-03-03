@@ -2,14 +2,14 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 3rem;
-  margin: 0 3rem 5rem 3rem;
+  padding: 2rem 6rem;
+  margin: 0 0 5rem 0;
   border-bottom: 1px solid grey;
+  background-image: linear-gradient(to top, rgba(235, 219, 210, 0.95),rgba(204, 212, 223, 0.95));
   top: 0;
   left: 0;
   right: 0;
   position: sticky;
-  background-color: #fff;
   z-index: 2;
 
   .logo {
@@ -18,14 +18,16 @@ header {
     gap: 2rem;
     text-decoration: none;
     color: #000;
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 2px 1.5px black;
 
     img {
       width: 6rem;
+      filter: drop-shadow(0 2px 2px #000);
     }
 
     h1 {
       font-size: 3rem;
+      font-family: Oswald, sans-serif;
     }
   }
 
@@ -45,12 +47,34 @@ header {
         }
 
         a {
+          font-family: Oswald, sans-serif;
           text-decoration: none;
-          color: #487bff;
+          color: #000000;
+
+          &:hover {
+            color: blueviolet;
+          }
+
+          &:active {
+            color: rgb(60, 5, 112);
+          }
         }
 
         .active {
-          text-decoration: underline;
+          text-decoration: none;
+          position: relative;
+
+          &:after {
+            content: '';
+        
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+        
+            border-width: 0 0 3px;
+            border-style: solid;
+          }
         }
       }
     }
