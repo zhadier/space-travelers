@@ -4,18 +4,18 @@
 
 # Space Travelers
 
-> 
+>  "Space Travelers" is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 
-![preview](bookstore.gif)
-This is my first React & Redux project.
+![preview](space.gif)
+This project was created in collaboration with @andres-condezo.
 ## Built With
 
 - HTML / CSS / JavaScript / React / Redux
 
 ## Live Demo
 
-<!-- - [Netlify](https://zhadier-bookstore.netlify.app) -->
+- [Netlify](https://space-travelers-az.netlify.app/)
 ## Getting Started
 
 ### To launch the project locally:
@@ -101,6 +101,11 @@ To learn React, check out the
 
 - GitHub: [@zhadier](https://github.com/zhadier)
 - LinkedIn: [Zeeshan Haider](https://www.linkedin.com/in/zhadier39/)
+
+👤 **Andres Condezo Monge**
+
+- GitHub: [@andres-condezo](https://github.com/andres-condezo)
+- LinkedIn: [Andres Condezo Monge](https://www.linkedin.com/in/andres-condezo/)
 
 ## 🤝 Contributing
 
