@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import planet from '../img/planet.png';
+import planet from '../img/planet-logo-2.svg';
 import './Header.scss';
 
 const Header = () => (
@@ -9,7 +9,7 @@ const Header = () => (
       to="/"
     >
       <img className="logo-img" alt="logo" src={planet} />
-      <h1 className="title">Space Travelers&quot; Hub</h1>
+      <h1 className="title">Space Travelers&apos; Hub</h1>
     </NavLink>
     <nav className="header__nav">
       <ul>

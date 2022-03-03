@@ -10,8 +10,6 @@ const ReservedMission = (props) => {
     dispatch(leaveMission(id));
   };
 
-  console.log(wikipedia, 'este');
-
   return (
     <li className="reserved__container" id={id}>
       <h3>{name}</h3>

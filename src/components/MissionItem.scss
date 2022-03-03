@@ -1,28 +1,42 @@
+.missions-container {
+  border: 1px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
 table {
   font-size: 1.6rem;
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
-  border: 2px solid #ddd;
-  margin-bottom: 4rem;
+  // border: 1px solid #000;
+  overflow: hidden;
+  background-color: rgba(238, 238, 238, 0.4);
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.1);
 
   th {
     font-weight: bold;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
   }
 
   tr:nth-child(even) {
-    background-color: #eee;
+    background-color: rgba(238, 238, 238, 0.4);
   }
 
   td {
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
   }
 
   .td-name {
     width: 10%;
     font-weight: bold;
+    font-family: Oswald, sans-serif;
   }
 
   .td-description {
@@ -35,6 +49,7 @@ table {
   }
 
   span {
+    display: block;
     font-size: 1rem;
     font-weight: bold;
     color: white;
@@ -52,18 +67,21 @@ table {
     text-align: center;
 
     button {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       background-color: transparent;
       cursor: pointer;
-      border: 1px solid gray;
+      border: 1px solid #000;
       border-radius: 5px;
-      color: gray;
       transition: color linear 0.2s, border-color;
       padding: 0.6rem;
+      color: blueviolet;
+      border-color: blueviolet;
 
       &:hover {
-        color: blueviolet;
-        border-color: blueviolet;
+        color: rgb(63, 3, 202);
+        border-color: rgb(63, 3, 202);
+        border: 2px solid;
+        font-weight: bold;
       }
 
       &:active {
