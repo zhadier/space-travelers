@@ -61,6 +61,7 @@
   flex-direction: column;
   padding: 0 2rem 6rem 6rem;
   width: 50%;
+  min-width: 300px;
 
   h2 {
     font-size: 2.8rem;
@@ -174,4 +175,97 @@
   margin-left: auto;
   float: right;
   padding: 0 6rem 6rem 2rem;
+}
+
+@media (max-width: 992px) {
+  .empty {
+    margin-bottom: 120px;
+    position: static;
+    font-size: 1.4rem;
+    width: 250px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100px);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(100px);
+    }
+  }
+
+  .empty-missions {
+    animation: slideIn2 infinite 8s linear;
+  }
+
+  @keyframes slideIn2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(100px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .profile-container {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    min-height: 70vh;
+    animation: slideright 1 0.5s ease-out;
+  }
+
+  .left {
+    margin: 0;
+  }
+
+  .reserved__section {
+    padding: 0;
+    margin-bottom: 100px;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    ul {
+      .reserved__container {
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        .reserved__buttons {
+          gap: 8px;
+
+          a {
+            font-size: 1.1rem;
+            width: 65px;
+            height: 22px;
+          }
+
+          .remove-reservation {
+            font-size: 1.1rem;
+            width: 80px;
+            height: 22px;
+          }
+
+          .long {
+            width: 105px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,6 +1,5 @@
 import missionsReducer from '../redux/missions/missions';
 
-
 describe('Testing for join mission action in missionsReducer ', () => {
   test('when the action is join mission, we have a new state with the action payload provided component id having its reserved set to true', () => {
     // arrange
