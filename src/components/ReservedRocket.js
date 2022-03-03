@@ -21,7 +21,7 @@ const ReservedRocket = (props) => {
         <a href={wikipedia} target="_blank" rel="noreferrer">
           Read more
         </a>
-        <button type="button" className="remove-reservation" onClick={handleCancelReservation}>
+        <button type="button" className="remove-reservation long" onClick={handleCancelReservation}>
           Cancel Reservation
         </button>
       </div>
