@@ -5,7 +5,7 @@ header {
   padding: 2rem 6rem;
   margin: 0 0 5rem 0;
   border-bottom: 1px solid grey;
-  background-image: linear-gradient(to top, rgba(235, 219, 210, 0.95),rgba(204, 212, 223, 0.95));
+  background-image: linear-gradient(to top, rgba(235, 219, 210, 0.95), rgba(204, 212, 223, 0.95));
   top: 0;
   left: 0;
   right: 0;
@@ -49,7 +49,7 @@ header {
         a {
           font-family: Oswald, sans-serif;
           text-decoration: none;
-          color: #000000;
+          color: #000;
 
           &:hover {
             color: blueviolet;
@@ -64,14 +64,12 @@ header {
           text-decoration: none;
           position: relative;
 
-          &:after {
+          &::after {
             content: '';
-        
             width: 100%;
             position: absolute;
             left: 0;
             bottom: -4px;
-        
             border-width: 0 0 3px;
             border-style: solid;
           }

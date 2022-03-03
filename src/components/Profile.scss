@@ -149,7 +149,6 @@
             color: blueviolet;
             box-shadow: inset 0 0 5px blueviolet;
           }
-
         }
       }
     }
@@ -159,7 +158,7 @@
 .red {
   border: 1px solid red !important;
   color: red !important;
-  
+
   &:hover {
     color: blueviolet !important;
     border-color: blueviolet !important;
@@ -169,12 +168,10 @@
     color: blueviolet !important;
     box-shadow: inset 0 0 5px blueviolet !important;
   }
-
 }
 
 .left {
   margin-left: auto;
   float: right;
   padding: 0 6rem 6rem 2rem;
-
 }

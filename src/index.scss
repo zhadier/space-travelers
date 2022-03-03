@@ -33,9 +33,11 @@ th {
     transform: translateX(150px);
     opacity: 0;
   }
+
   80% {
     transform: translateX(-5px);
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
