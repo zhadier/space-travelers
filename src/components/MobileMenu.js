@@ -12,8 +12,8 @@ const MobileMenu = ({ handleMobileMenu }) => (
       <AiOutlineClose className="x-icon" />
     </button>
     <nav className="mobile-menu">
-      <ul>
-        <li>
+      <ul className="mobile-menu__ul">
+        <li className="mobile-menu__li">
           <NavLink
             className={({ isActive }) => (isActive ? 'active' : '')}
             to="/"

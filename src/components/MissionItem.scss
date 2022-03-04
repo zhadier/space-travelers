@@ -1,5 +1,5 @@
 .missions-container {
-  border: 1px solid #000;
+  border: 1px solid grey;
   border-radius: 15px;
   width: 90%;
   margin: auto;
@@ -21,7 +21,7 @@ table {
   th {
     font-weight: bold;
     padding: 1rem;
-    border: 1px solid #000;
+    border: 1px solid grey;
   }
 
   tr:nth-child(even) {
@@ -30,7 +30,7 @@ table {
 
   td {
     padding: 1rem;
-    border: 1px solid #000;
+    border: 1px solid grey;
   }
 
   .td-name {
@@ -70,7 +70,7 @@ table {
       font-size: 1.2rem;
       background-color: transparent;
       cursor: pointer;
-      border: 1px solid #000;
+      border: 1px solid grey;
       border-radius: 5px;
       transition: color linear 0.2s, border-color;
       padding: 0.6rem;
