@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Quattrocento:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Quattrocento', serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: rgba(223, 223, 223, 0.8);
+  background-image: url(./img/clouds2.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+h1,
+h2,
+th {
+  font-family: 'Oswald', sans-serif;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
