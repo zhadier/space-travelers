@@ -6,8 +6,10 @@
 
 >  "Space Travelers" is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
+![mobile version preview](space-mobile.gif)
 
-![preview](space.gif)
+![desktop version preview](space-desktop.gif)
+
 This project was created in collaboration with @andres-condezo.
 ## Built With
 
